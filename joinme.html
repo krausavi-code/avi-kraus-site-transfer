@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ליווי אישי בבינה מלאכותית | אבי קראוס</title>
+<meta name="description" content="ליווי אישי, אחד על אחד, בכלי בינה מלאכותית וברשתות חברתיות: בזום או אצלך בבית, בירושלים והסביבה.">
+<meta property="og:title" content="ליווי אישי בבינה מלאכותית | אבי קראוס">
+<meta property="og:description" content="ליווי אישי, אחד על אחד, בכלי בינה מלאכותית וברשתות חברתיות.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Rubik:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0f2a43; --teal:#1f7a6f; --teal-light:#2a9d8f;
+    --gold:#c9a227; --gold-light:#e3c14e; --cream:#f7f4ed; --ink:#13202e;
+    --muted:#5c6b78; --line:#e6e0d4; --white:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Heebo","Rubik","Arial Hebrew",sans-serif;direction:rtl;background:#dfe5ea;color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;padding:24px 14px}
+  .page{max-width:880px;margin:0 auto;background:var(--white);border-radius:18px;overflow:hidden;box-shadow:0 24px 60px -24px rgba(15,42,67,.45)}
+  .ltr{direction:ltr;unicode-bidi:isolate}
+
+  .top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 38px;background:#08192a}
+  .top a{color:#cdd8e2;text-decoration:none;font-size:14px;font-weight:500}
+  .top a:hover{color:var(--gold-light)}
+  .top .brand{font-family:"Rubik";font-weight:800;color:#fff;font-size:16px}
+
+  .hero{background:linear-gradient(135deg,#0a1f33,#0f2a43 55%,#071521);color:#fff;padding:34px 38px 30px}
+  .kicker{display:inline-block;background:rgba(42,157,143,.22);border:1px solid rgba(42,157,143,.5);color:#7fe0d3;padding:5px 14px;border-radius:30px;font-weight:600;font-size:13px;margin-bottom:14px}
+  .hero h1{font-family:"Rubik";font-weight:900;font-size:clamp(28px,5vw,42px);line-height:1.15;margin-bottom:12px;text-wrap:balance}
+  .hero h1 .g{background:linear-gradient(110deg,var(--gold-light),var(--teal-light));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{color:#cdd8e2;font-size:17px;max-width:620px}
+  .hero-img{margin-top:22px;border-radius:14px;overflow:hidden;border:1px solid rgba(227,193,78,.35)}
+  .hero-img img{display:block;width:100%;height:auto}
+
+  .body{padding:28px 38px 10px;display:flex;flex-direction:column;gap:30px}
+  .sec-title{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+  .sec-title::before{content:"";width:5px;height:24px;border-radius:3px;background:linear-gradient(var(--teal),var(--gold))}
+  .sec-title h2{font-family:"Rubik";font-weight:800;font-size:22px;color:var(--navy)}
+
+  .feats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .feat{border:1px solid var(--line);border-radius:13px;background:#fdfcf9;overflow:hidden}
+  .feat img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+  .feat .t{padding:12px 14px}
+  .feat h3{font-family:"Rubik";font-weight:700;font-size:16px;color:var(--navy);margin-bottom:3px}
+  .feat p{font-size:14px;color:var(--muted);line-height:1.55}
+
+  .price{display:flex;flex-wrap:wrap;gap:14px}
+  .pcard{flex:1 1 240px;border:1px solid var(--line);border-radius:13px;padding:16px 18px;background:var(--cream)}
+  .pcard .n{font-family:"Rubik";font-weight:900;font-size:26px;color:var(--navy);line-height:1.1}
+  .pcard .l{font-size:14px;color:var(--muted);margin-top:4px}
+  .pcard.hi{border:2px solid var(--gold);background:#fffaf0}
+  .note{font-size:14px;color:var(--muted);margin-top:10px}
+
+  .event{border:2px solid var(--gold);border-radius:14px;padding:18px 20px;background:#fffaf0}
+  .event h3{font-family:"Rubik";font-weight:800;font-size:19px;color:var(--navy);line-height:1.35;margin-bottom:10px}
+  .event ul{list-style:none;display:grid;gap:4px;margin-bottom:12px}
+  .event .only{display:inline-block;background:var(--navy);color:#fff;font-size:13px;font-weight:600;padding:3px 12px;border-radius:20px;margin-bottom:10px}
+  .event .topics{list-style:disc;padding-inline-start:20px;color:var(--ink)}
+  .event p{margin-bottom:6px}
+
+  .faq{display:flex;flex-direction:column;gap:10px}
+  details{border:1px solid var(--line);border-radius:12px;background:#fdfcf9;padding:12px 16px}
+  details[open]{border-color:var(--teal-light)}
+  summary{cursor:pointer;font-weight:700;color:var(--navy);font-size:16px}
+  details p{margin-top:8px;color:var(--ink);font-size:15px}
+
+  .footer{margin-top:24px;padding:24px 38px;background:linear-gradient(135deg,var(--navy),#0b2236);color:#fff;border-top:4px solid var(--gold);display:flex;flex-direction:column;gap:10px}
+  .footer .ttl{font-family:"Rubik";font-weight:800;font-size:18px;color:var(--gold-light)}
+  .footer a{color:#e3eaf0;text-decoration:none}
+  .footer a:hover{color:var(--gold-light)}
+  .footer .row{display:flex;gap:10px;align-items:center;font-size:15px}
+
+  @media(max-width:680px){
+    body{padding:12px 0}
+    .page{border-radius:0}
+    .top,.hero,.body,.footer{padding-left:16px;padding-right:16px}
+    .feats{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="top">
+    <span class="brand">אבי קראוס</span>
+    <a href="index.html">→ חזרה לדף הבית</a>
+  </div>
+
+  <div class="hero">
+    <span class="kicker">🤖 בשיתוף JoinMe</span>
+    <h1>ליווי אישי <span class="g">בבינה מלאכותית</span> וברשתות חברתיות</h1>
+    <p>שיעורים אחד על אחד, בקצב שלך ועל המכשיר שלך. בזום עם שיתוף מסך, או פרונטלית אצלך בבית, בירושלים והסביבה.</p>
+    <div class="hero-img"><img src="media/joinme-ai/01-livui-ishi-babayit.jpg" alt="שני אנשים על ספה מסתכלים יחד על טאבלט" width="1200" height="800"></div>
+  </div>
+
+  <div class="body">
+
+    <section>
+      <div class="sec-title"><h2>מה לומדים</h2></div>
+      <div class="feats">
+        <div class="feat"><img src="media/joinme-ai/02-kley-bina-batelefon.jpg" alt="טלפון עם בועות צ'אט ואייקונים" loading="lazy" width="1200" height="800"><div class="t"><h3>כלי בינה בטלפון</h3><p>ChatGPT, ‏Claude, ‏Gemini ו־NotebookLM: איך שואלים נכון ומקבלים תשובות טובות.</p></div></div>
+        <div class="feat"><img src="media/joinme-ai/03-reshatot-hevratiyot.jpg" alt="פוסט ברשת חברתית עם לייק, לב ושיתוף" loading="lazy" width="1200" height="800"><div class="t"><h3>רשתות חברתיות</h3><p>פייסבוק ואינסטגרם: פתיחת חשבון, הגדרות פרטיות, פרסום תמונות ומעקב אחרי המשפחה.</p></div></div>
+        <div class="feat"><img src="media/joinme-ai/01-livui-ishi-babayit.jpg" alt="ליווי אישי בבית" loading="lazy" width="1200" height="800"><div class="t"><h3>בטיחות ברשת</h3><p>מה מותר לשתף ומה אסור לעולם, ואיך מזהים הונאות שנעשות בעזרת בינה מלאכותית.</p></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-title"><h2>מחירים</h2></div>
+      <div class="price">
+        <div class="pcard"><div class="n">350 ש״ח</div><div class="l">שיעור בודד של 45 דקות</div></div>
+        <div class="pcard hi"><div class="n">250 ש״ח לשיעור</div><div class="l">לחברי JoinMe, בחבילה של 10 שיעורים (2,500 ש״ח בתשלום מראש)</div></div>
+      </div>
+      <p class="note">לפני שמתחילים: שיחת היכרות של רבע שעה, ללא עלות ובלי התחייבות.</p>
+    </section>
+
+    <section>
+      <div class="sec-title"><h2>אירוע קרוב</h2></div>
+      <div class="event">
+        <span class="only">לנרשמים לקורס המרצים בלבד</span>
+        <h3>כלי בינה מלאכותית למרצים: ChatGPT, ‏Claude, ‏Gemini ו־NotebookLM</h3>
+        <ul>
+          <li>📅 יום חמישי, 3 בדצמבר 2026</li>
+          <li>🕘 09:30 עד 11:00</li>
+          <li>📍 מנהל קהילתי יובלים, רחוב אברהם שטרן 3, ירושלים</li>
+          <li>🎟️ ההשתתפות כלולה בקורס</li>
+        </ul>
+        <p>הרצאה מעשית על ארבעת כלי הבינה המלאכותית המובילים. בהרצאה:</p>
+        <ul class="topics">
+          <li><b>הבנת הכלים:</b> מה כל כלי יודע לעשות ואיך מתחילים לעבוד איתו</li>
+          <li><b>ההבדלים:</b> במה הכלים שונים זה מזה, ומתי כדאי לבחור בכל אחד</li>
+          <li><b>היתרונות:</b> איך כל כלי חוסך זמן בעבודת המרצה, מהכנת הרצאה ועד סיכום חומרים</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-title"><h2>שאלות נפוצות</h2></div>
+      <div class="faq">
+        <details><summary>למה דווקא אחד על אחד?</summary><p>כי כל השיעור מוקדש רק לך: לשאלות שלך, למכשיר שלך ולמטרות שלך. בלי קבוצה, בלי לחכות לאחרים ובלי להתבייש לשאול.</p></details>
+        <details><summary>אין לי שום ידע במחשבים. זה מתאים לי?</summary><p>בדיוק בשבילך. מתחילים מהבסיס, בקצב שלך, וחוזרים על כל שלב כמה פעמים שצריך. אף שאלה היא לא שאלה מטופשת.</p></details>
+        <details><summary>מה צריך להכין לשיעור הראשון?</summary><p>סמארטפון או מחשב עם חיבור לאינטרנט, מספר טלפון וכתובת מייל פעילים, והסיסמאות שיש לך (אם יש). את כל השאר נגדיר יחד.</p></details>
+        <details><summary>האם כלי הבינה המלאכותית עולים כסף?</summary><p>לרוב הכלים, כמו ChatGPT, ‏Gemini, ‏Claude ו־NotebookLM, יש גרסה חינמית שמספיקה לשימוש יומיומי. בשיעור נסביר מתי גרסה בתשלום שווה את הכסף, ומתי לא צריך אותה.</p></details>
+        <details><summary>זה מתאים גם למי שעדיין עובד או מרצה?</summary><p>כן. הליווי מותאם למטרה שלך: ליזמים ולמרצים נלמד לכתוב תוכן, להכין מצגות ולפרסם ברשתות בעזרת כלי בינה.</p></details>
+        <details><summary>כמה זמן לוקח עד שאסתדר לבד?</summary><p>זה תלוי בך ובמטרות שלך. כבר מהשיעור הראשון תצא עם משהו שאפשר לעשות לבד. אחרי כל שיעור תקבל סיכום קצר עם השלבים, כדי לתרגל בין השיעורים.</p></details>
+        <details><summary>אפשר שבן או בת הזוג ילמדו איתי באותו שיעור?</summary><p>הליווי הוא אחד על אחד בלבד, כדי שכל שיעור יותאם במלואו למשתתף אחד. בן או בת הזוג מוזמנים לקבוע ליווי אישי משלהם.</p></details>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="footer">
+    <div class="ttl">לקביעת שיחת היכרות</div>
+    <div class="row"><span>📞</span><a href="tel:0507646066" class="ltr">050-7646066</a></div>
+    <div class="row"><span>✉️</span><a href="mailto:krausavi@gmail.com" class="ltr">krausavi@gmail.com</a></div>
+    <div class="row"><span>🏠</span><a href="index.html">לדף הבית ולנושאי ההרצאות</a></div>
+  </div>
+
+</div>
+</body>
+</html>

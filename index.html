@@ -76,6 +76,14 @@
   .dom h4{font-family:"Rubik";font-weight:700;font-size:14.5px;color:var(--navy);margin-bottom:3px}
   .dom p{font-size:12px;color:var(--muted);line-height:1.45}
 
+  .joinme{display:flex;gap:16px;align-items:center;margin-top:18px;padding:16px 18px;border:2px solid var(--gold);border-radius:13px;background:#fffaf0;text-decoration:none;color:inherit;transition:.18s}
+  .joinme:hover{box-shadow:0 10px 24px -16px rgba(15,42,67,.4);transform:translateY(-2px)}
+  .joinme .ic{flex:none;width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:24px;background:linear-gradient(135deg,var(--gold),var(--teal))}
+  .joinme .txt{flex:1;min-width:0}
+  .joinme h3{font-family:"Rubik";font-weight:700;font-size:17px;color:var(--navy);margin-bottom:3px;line-height:1.3}
+  .joinme p{font-size:14px;color:var(--muted);line-height:1.55}
+  .joinme .go{flex:none;font-weight:700;color:var(--teal);font-size:14px;white-space:nowrap}
+
   /* ===== footer ===== */
   .footer{margin-top:24px;display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;padding:24px 38px;background:linear-gradient(135deg,var(--navy),#0b2236);color:#fff;border-top:4px solid var(--gold)}
   .footer .contact{display:flex;flex-direction:column;gap:11px}
@@ -97,6 +105,7 @@
     .intro{flex-direction:column;align-items:flex-start;padding:18px 22px}
     .body{padding:22px 22px 8px}
     .domains{grid-template-columns:1fr}
+    .joinme{flex-wrap:wrap}
     .footer{flex-direction:column-reverse;text-align:center;padding:24px 22px}
     .footer .contact{align-items:center}
   }
@@ -204,6 +213,11 @@
       <div class="lecture"><div class="ic">💰</div><div class="txt"><h3>כלכלת משק בית והתנהלות פיננסית</h3><p>מהתקציב ועד החיסכון, כוחה של הריבית, סודות ההלוואות והבנקאות, מתוך שלושה עשורים בלב המערכת. הכסף שלך, בידיים שלך.</p></div></div>
       <div class="lecture"><div class="ic">📈</div><div class="txt"><h3>שוק ההון, השקעות ומסחר</h3><p>בורסה, מניות, אג"ח ואופציות בשפה ברורה, והפרשיות הכלכליות הגדולות שעיצבו את ישראל, מהמניות הבנקאיות ועד היום.</p></div></div>
     </div>
+    <a class="joinme" href="joinme.html">
+      <div class="ic">🤝</div>
+      <div class="txt"><h3>ליווי אישי בבינה מלאכותית, בשיתוף JoinMe</h3><p>שיעורים אחד על אחד בכלי בינה וברשתות חברתיות, בזום או אצלך בבית. כאן גם פרטי ההרצאה לקורס המרצים ב־3 בדצמבר.</p></div>
+      <span class="go">לפרטים ←</span>
+    </a>
     <div class="domains">
       <div class="dom"><div class="di">💰</div><h4>כלכלה ופיננסים</h4><p>שוק ההון, אשראי, כלכלת משק בית</p></div>
       <div class="dom"><div class="di">🛡️</div><h4>ביטחון בהיבט כלכלי</h4><p>טרור, מימון, קריפטו וסייבר</p></div>
